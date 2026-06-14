@@ -30,7 +30,6 @@ app.get('/emails/process-one', async (req: Request, res: Response) => {
         return res.status(404).json({ error: 'No email to process' });
     }
     const job = JSON.parse(jobData);
-    // simulate email sending here (e.g., using nodemailer)
     const transporter = nodemailer.createTransport({
         host: process.env.SMTP_HOST,
         port: parseInt(process.env.SMTP_PORT || '587'),
