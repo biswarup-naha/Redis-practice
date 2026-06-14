@@ -1,3 +1,5 @@
+name: redis-practice
+version: '1.0.0'
 services:
   redis:
     image: redis:latest
